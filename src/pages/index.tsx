@@ -17,7 +17,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="flex flex-col min-h-screen items-center justify-evenly">
+    <main className="main">
       {projectList.map((project: ProjectType) => (<ProjectCard key={project._id} project={project}/>))}
     </main>
   )
