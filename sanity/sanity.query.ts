@@ -14,3 +14,16 @@ export async function getProjects() {
     }`
   );
 }
+
+export async function getHeroSection() {
+  return client.fetch(
+    groq`*[_type == "hero"]{
+      heading,
+      subheading,
+      backgroundImage {alt, "image": asset->url},
+      bio,
+      href,
+      ctaText,
+    }`
+  );
+}
