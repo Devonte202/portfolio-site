@@ -1,3 +1,4 @@
 import projects from './projects'
+import hero from './hero'
 
-export const schemaTypes = [projects]
+export const schemaTypes = [hero, projects]
