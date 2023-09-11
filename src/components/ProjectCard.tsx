@@ -43,6 +43,7 @@ export default function ProjectCard(props: { project: ProjectType }) {
             display: inline-block;
             position: relative;
             width: 310px;
+            max-width: 68%;
             border-radius: 10px;
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
             background: #e0e0e0;
