@@ -37,26 +37,38 @@ export default function Home() {
         </div>
         <img className="hero_profile-image" src={heroContent?.backgroundImage.image} />
       </div>
-      {projectList.map((project: ProjectType) => (<ProjectCard key={project._id} project={project}/>))}
+      <div className="project-section">
+        {projectList.map((project: ProjectType) => (<ProjectCard key={project._id} project={project}/>))}
+      </div>
       <style jsx global>{`
         body {
           margin: 0;
         }
         .hero {
-          width: 100vw;
-          display: flex;
-          justify-content: space-evenly;
+          height: 100vh;
+          width: 100%;
           background: black;
         }
         .hero_profile-image {
-          height: 100vh;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
         .hero_text-content {
-          margin-top: 40px;
+          position: absolute;
+          top: 5%;
+          z-index: 100;
+          width: 100vw;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
         }
         .hero_heading, .hero_subheading, .hero_bio {
+          padding: 15px;
+          margin: 0;
           color: white;
-          font-size: 22px;
+          font-size: 15px;
           font-family: "myriad-pro", sans-serif;
           font-style: normal;
           font-weight: 700;
@@ -68,13 +80,14 @@ export default function Home() {
           -webkit-font-smoothing: antialiased;
         }
         .hero_heading {
-          font-size: 56px;
-          line-height: 1em;
+          font-size: 25px;
         }
         .hero_subheading {
-          font-size: 40px;
+          font-size: 20px;
         }
-
+        .project-section {
+          background: #e0e0e0;
+        }
       `}</style>
     </main>
   )
