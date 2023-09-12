@@ -23,7 +23,7 @@ export default function Cta(props: CtaProps) {
       {`
        .Btn {
         padding: 15px;
-        background: #e0e0e0;
+        background: #fff;
         border: none;
         border-radius: .5rem;
         color: #444;

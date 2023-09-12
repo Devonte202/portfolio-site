@@ -2,7 +2,7 @@
 import { getHeroSection, getProjects } from "../../sanity/sanity.query";
 import type { HeroType, ProjectType } from "../../types";
 import { useEffect, useState } from "react";
-import ProjectCard from "../components/ProjectCard";
+import Projects from "../components/Projects";
 import Head from "next/head";
 
 export default function Home() {
@@ -36,13 +36,13 @@ export default function Home() {
           <p className="hero_bio">{heroContent?.bio}</p>
         </div>
         <img className="hero_profile-image" src={heroContent?.backgroundImage.image} />
+        <Projects />
       </div>
-      <div className="project-section">
-        {projectList.map((project: ProjectType) => (<ProjectCard key={project._id} project={project}/>))}
-      </div>
+      
       <style jsx global>{`
         body {
           margin: 0;
+          background: #e0e0e0;
         }
         .hero {
           height: 100vh;
@@ -84,9 +84,6 @@ export default function Home() {
         }
         .hero_subheading {
           font-size: 20px;
-        }
-        .project-section {
-          background: #e0e0e0;
         }
       `}</style>
     </main>

@@ -42,18 +42,20 @@ export default function ProjectCard(props: { project: ProjectType }) {
             font-family: 'Open Sans', sans-serif;
             display: inline-block;
             position: relative;
-            width: 310px;
-            max-width: 68%;
+            width: 250px;
+            box-shadow:  5px 5px 9px #c4c4c4,
+             -5px -5px 9px #ffffff;
             border-radius: 10px;
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-            background: #e0e0e0;
-            margin: 30px;
+            background: linear-gradient(322deg, rgba(255,255,255,1) 41%, rgba(240,240,240,1) 82%, rgba(223,223,223,1) 100%);
             padding: 20px;
             transition: .2s ease-in-out;
+            border: 1px solid #e6e6e6;
+
           }
 
           .project-card:hover {
-            box-shadow:  7px 7px 14px #868686, -7px -7px 14px #ffffff;
+            box-shadow:  14px 14px 35px #7a7a7a,
+             -14px -14px 35px #ffffff;
           }
 
           .project-card_title {
@@ -72,7 +74,7 @@ export default function ProjectCard(props: { project: ProjectType }) {
           
           .project-card_thumbnail-container {
             width: 100%;
-            height: 220px;
+            height: 190px;
             position: relative;
             overflow: hidden;
           }
@@ -116,6 +118,7 @@ export default function ProjectCard(props: { project: ProjectType }) {
           .project-card_tech-section {
             display: flex;
             flex-wrap: wrap;
+            height: 85px;
           }
 
           .project-card_bubble {
@@ -124,6 +127,15 @@ export default function ProjectCard(props: { project: ProjectType }) {
             border-radius: 30px;
             border: 1px solid black;
             font-size: .7em;
+            height: 12px;
+          }
+          @media (min-width: 744px) {
+            .project-card {
+              width: 310px;
+            }
+            .project-card_thumbnail-container {
+              height: 220px;
+            }
           }
         `}
       </style>
