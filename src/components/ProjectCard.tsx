@@ -39,7 +39,7 @@ export default function ProjectCard(props: { project: ProjectType }) {
           }
 
           .project-card {
-            font-family: 'Open Sans', sans-serif;
+            font-family: Inter;
             display: inline-block;
             position: relative;
             width: 250px;
@@ -54,8 +54,8 @@ export default function ProjectCard(props: { project: ProjectType }) {
           }
 
           .project-card:hover {
-            box-shadow:  14px 14px 35px #7a7a7a,
-             -14px -14px 35px #ffffff;
+            box-shadow:  35px 35px 35px #7a7a7a;
+            box-shadow: 0 11px 14px 14px #7a7a7a;
           }
 
           .project-card_title {

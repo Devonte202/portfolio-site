@@ -33,9 +33,9 @@ export default function Projects() {
         }
 
         .project-section_title {
-          font-family: 'Open Sans', sans-serif;
+          font-family: Inter;
           color: #444;
-          font-size: 80px;
+          font-size: 72px;
           margin-top: 0px;
           margin-bottom: 30px;
         }
