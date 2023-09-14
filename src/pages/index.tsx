@@ -19,9 +19,6 @@ export default function Home() {
           font-family: Inter;
           src: url(Inter.ttf);
         }
-        body {
-          margin: 0;
-        }
       `}</style>
     </main>
   )

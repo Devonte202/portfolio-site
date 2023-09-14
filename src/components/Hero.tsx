@@ -21,23 +21,49 @@ export default function Hero() {
         <h3 className="hero_subheading">{heroContent?.subheading}</h3>
         <p className="hero_bio">{heroContent?.bio}</p>
       </div>
-      <img className="hero_profile-image" src={heroContent?.backgroundImage.image} />
+      <div className="hero_image-wrapper">
+        <img className="hero_profile-image" src={heroContent?.backgroundImage.image} />
+      </div>
 
       <style jsx global>{`
-        .hero {
-          height: 100vh;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
+        @keyframes hover {
+          from {
+            box-shadow: 0 5px 7px 7px #7a7a7a;
+            transform: translateY(0);
+          }
+        
+          to {
+            box-shadow: 0 11px 14px 14px #7a7a7a;
+            transform: translateY(-10px);
+          }
         }
+
+        .hero {
+          display: flex;
+          justify-content: space-evenly;
+          flex-direction: column;
+          align-items: center;
+          height: 100vh;
+        }
+
+        .hero_image-wrapper {
+          width: 200px;
+          height: 200px;
+          border-radius: 100%;
+          overflow: hidden;
+          animation: hover 2s linear infinite alternate;
+        }
+
         .hero_profile-image {
           width: 100%;
+          height: 100%;
           object-fit: cover;
         }
+
         .hero_text-content {
-          z-index: 100;
           display: flex;
           flex-direction: column;
+          text-align: center;
         }
         .hero_heading, .hero_subheading, .hero_bio {
           padding: 15px;
@@ -58,27 +84,27 @@ export default function Hero() {
           font-size: 62px;
         }
         .hero_subheading {
-          font-size: 20px;
+          font-size: 28px;
         }
 
         @media (min-width: 744px) {
           .hero {
             flex-direction: row;
-            padding: 80px;
+          }
+          .hero_image-wrapper {
+            width: 320px;
+            height: 320px;
           }
 
           .hero_text-content {
+            text-align: left;
             width: 40%;
-          }
-
-          .hero_profile-image {
-            width: 60%;
           }
         }
 
         @media (min-width: 1080px) {
           .hero_heading {
-            font-size: 72px;
+            font-size: 80px;
           }
         }
       `}

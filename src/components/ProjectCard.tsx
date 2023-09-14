@@ -50,11 +50,9 @@ export default function ProjectCard(props: { project: ProjectType }) {
             padding: 20px;
             transition: .2s ease-in-out;
             border: 1px solid #e6e6e6;
-
           }
 
           .project-card:hover {
-            box-shadow:  35px 35px 35px #7a7a7a;
             box-shadow: 0 11px 14px 14px #7a7a7a;
           }
 
