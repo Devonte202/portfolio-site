@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import { TypeAnimation } from 'react-type-animation';
 import { getHeroSection } from "../../sanity/sanity.query";
 import type { HeroType } from "../../types";
 
@@ -13,12 +14,29 @@ export default function Hero() {
   useEffect(() => {
     renderHeroSection()
   }, [])
+
+
   
   return (
     <div className="hero">
       <div className="hero_text-content">
         <h1 className="hero_heading">{heroContent?.heading}</h1>
-        <h3 className="hero_subheading">{heroContent?.subheading}</h3>
+        <TypeAnimation
+          sequence={[
+            'A Software Engineer',
+            1000,
+            'A Digital Creator',
+            1000,
+            'A YouTuber',
+            1000,
+            'An Adventurer',
+            1000
+          ]}
+          wrapper="h3"
+          speed={10}
+          style={{ fontSize: '32px', padding: '15px', color: 'blue', margin: '0' }}
+          repeat={Infinity}
+        />
         <p className="hero_bio">{heroContent?.bio}</p>
       </div>
       <div className="hero_image-wrapper">
@@ -44,6 +62,7 @@ export default function Hero() {
           flex-direction: column;
           align-items: center;
           height: 100vh;
+          font-family: Inter;
         }
 
         .hero_image-wrapper {
@@ -74,7 +93,7 @@ export default function Hero() {
           font-weight: 700;
           line-height: 1.2em;
           letter-spacing: 0;
-          color: #444;
+          color: #000;
           text-rendering: geometricPrecision;
           text-transform: none;
           text-decoration: none;
