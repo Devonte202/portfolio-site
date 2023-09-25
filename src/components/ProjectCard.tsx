@@ -57,7 +57,7 @@ export default function ProjectCard(props: { project: ProjectType }) {
           }
 
           .project-card_title {
-            color: #444;
+            color: #000;
             font-weight: 600;
             font-size: 22px;
             line-height: 2;

@@ -34,7 +34,19 @@ export default function Hero() {
           ]}
           wrapper="h3"
           speed={10}
-          style={{ fontSize: '32px', padding: '15px', color: 'blue', margin: '0' }}
+          style={{
+            fontSize: '24px',
+            fontWeight: 'lighter',
+            padding: '15px',
+            borderRadius: '10px',
+            color: 'white',
+            fontFamily: 'monospace',
+            margin: '0',
+            backgroundColor: '#101010',
+            backdropFilter: 'blur(90%)',
+            marginLeft: '15px',
+            marginRight: '15px',
+          }}
           repeat={Infinity}
         />
         <p className="hero_bio">{heroContent?.bio}</p>
@@ -68,7 +80,7 @@ export default function Hero() {
         .hero_image-wrapper {
           width: 200px;
           height: 200px;
-          border-radius: 100%;
+          border-radius: 10%;
           overflow: hidden;
           animation: hover 2s linear infinite alternate;
         }
@@ -77,6 +89,7 @@ export default function Hero() {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position: top;
         }
 
         .hero_text-content {
@@ -100,8 +113,14 @@ export default function Hero() {
           -webkit-font-smoothing: antialiased;
         }
         .hero_heading {
-          font-size: 62px;
+          font-size: 80px;
         }
+
+        .hero_bio {
+          font-size: 18px;
+          font-weight: 300;
+        }
+
         .hero_subheading {
           font-size: 28px;
         }

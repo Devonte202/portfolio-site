@@ -12,6 +12,9 @@ export default function Home() {
       </Head>
 
       <Hero />
+      <div>
+        
+      </div>
       <Projects />
 
       <style jsx global>{`

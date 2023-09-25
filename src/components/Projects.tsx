@@ -34,7 +34,7 @@ export default function Projects() {
 
         .project-section_title {
           font-family: Inter;
-          color: #444;
+          color: #000;
           font-size: 72px;
           margin-top: 0px;
           margin-bottom: 30px;
