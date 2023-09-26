@@ -113,7 +113,7 @@ export default function Hero() {
           -webkit-font-smoothing: antialiased;
         }
         .hero_heading {
-          font-size: 80px;
+          font-size: 62px;
         }
 
         .hero_bio {
