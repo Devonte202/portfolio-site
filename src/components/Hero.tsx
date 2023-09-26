@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { TypeAnimation } from 'react-type-animation';
 import { getHeroSection } from "../../sanity/sanity.query";
-import type { HeroType } from "../../types";
+import type { HeroType } from "../types";
 
 export default function Hero() {
   const [heroContent, setHeroContent] = useState<HeroType>();

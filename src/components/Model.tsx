@@ -1,11 +1,7 @@
-import "@google/model-viewer";
-
 const Model = () => (
   <div id="model">
     <model-viewer 
       src="devonte.glb"
-      ar
-      ar-modes="webxr scene-viewer quick-look"
       camera-controls
       poster="poster.webp"
       shadow-intensity="1"

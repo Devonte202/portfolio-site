@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import ProjectCard from "./ProjectCard";
-import { ProjectType } from "@/types";
+import { ProjectType } from "@/src/types";
 import { getProjects } from "@/sanity/sanity.query";
 
 export default function Projects() {

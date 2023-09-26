@@ -1,5 +1,5 @@
 "use client";
-import type { ProjectType } from "../../types";
+import type { ProjectType } from "../types";
 import Cta from "./Cta";
 
 export default function ProjectCard(props: { project: ProjectType }) {
